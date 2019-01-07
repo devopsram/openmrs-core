@@ -11,9 +11,7 @@ node{
      stage('Archieve the artifacts'){
          archive 'target/*.jar'
      }
-     stage('Publish the Junit results'){
-         junit 'target/surefire-reports/*.xml'
-     }
+
      stage('Sonar qube analysis'){
 	   
 	   withSonarQubeEnv('sonarqube'){
